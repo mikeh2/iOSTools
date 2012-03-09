@@ -21,6 +21,8 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+test-reports/*
+*.ipa
 # other source repository
 .hg
 .svn
