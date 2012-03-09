@@ -1,0 +1,53 @@
+//
+// Prefix header for all source files of the 'iOSTools' target in the 'iOSTools' project
+//
+
+#ifdef __OBJC__
+   #import <Foundation/Foundation.h>
+   #import <UIKit/UIKit.h>
+   #import "MyTypes.h"
+
+//
+// http://www.iphonedevsdk.com/forum/iphone-sdk-development/8162-debugging-tip-nslog.html
+//
+#if ! defined(__GNUC__)
+#warning DEBUG/NDEBUG macros may not be #defined correctly
+#endif
+
+#if ! defined(DEBUG) && ! defined(NDEBUG)
+
+#if defined(__OPTIMIZE__)
+#define NDEBUG 1
+#else
+#define DEBUG 1
+#endif
+
+#endif
+
+
+#if ! defined(DEBUG) && ! defined(NDEBUG)
+#warning Neither of DEBUG/NDEBUG macros are #defined
+#endif
+
+// see http://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+// for how the '##' is intrepreted
+//
+#ifdef DEBUG
+#define DebugLog(s, ...) NSLog(s, ##__VA_ARGS__)
+#define DetailLog(s, ...)  NSLog(@"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__]lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DebugLog(s, ...)
+#define DetailLog(s, ...)
+#endif
+
+
+// don't use float value -- rounding errors
+#define SYSTEM_VERSION_EQUAL_TO(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+
+#endif
