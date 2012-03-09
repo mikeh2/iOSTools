@@ -14,9 +14,11 @@
 		575D9F63150A91230025EF7E /* libiOSTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575D9F4B150A91230025EF7E /* libiOSTools.a */; };
 		575D9F69150A91230025EF7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 575D9F67150A91230025EF7E /* InfoPlist.strings */; };
 		575D9F6C150A91230025EF7E /* iOSToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D9F6B150A91230025EF7E /* iOSToolsTests.m */; };
-		575D9F78150A916B0025EF7E /* MyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 575D9F76150A916B0025EF7E /* MyTypes.h */; };
-		575D9F79150A916B0025EF7E /* MyTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D9F77150A916B0025EF7E /* MyTypes.m */; };
+		575D9F78150A916B0025EF7E /* MEHTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 575D9F76150A916B0025EF7E /* MEHTypes.h */; };
+		575D9F79150A916B0025EF7E /* MEHTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D9F77150A916B0025EF7E /* MEHTypes.m */; };
 		575D9F7C150A92500025EF7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575D9F7B150A92500025EF7E /* UIKit.framework */; };
+		575D9F82150AB38E0025EF7E /* UIKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 575D9F80150AB38E0025EF7E /* UIKitAdditions.h */; };
+		575D9F83150AB38E0025EF7E /* UIKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D9F81150AB38E0025EF7E /* UIKitAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +43,12 @@
 		575D9F68150A91230025EF7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		575D9F6A150A91230025EF7E /* iOSToolsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSToolsTests.h; sourceTree = "<group>"; };
 		575D9F6B150A91230025EF7E /* iOSToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSToolsTests.m; sourceTree = "<group>"; };
-		575D9F76150A916B0025EF7E /* MyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTypes.h; path = categories/MyTypes.h; sourceTree = "<group>"; };
-		575D9F77150A916B0025EF7E /* MyTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTypes.m; path = categories/MyTypes.m; sourceTree = "<group>"; };
+		575D9F76150A916B0025EF7E /* MEHTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MEHTypes.h; path = categories/MEHTypes.h; sourceTree = "<group>"; };
+		575D9F77150A916B0025EF7E /* MEHTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MEHTypes.m; path = categories/MEHTypes.m; sourceTree = "<group>"; };
 		575D9F7A150A920E0025EF7E /* notUsed */ = {isa = PBXFileReference; lastKnownFileType = text; path = notUsed; sourceTree = "<group>"; };
 		575D9F7B150A92500025EF7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		575D9F80150AB38E0025EF7E /* UIKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIKitAdditions.h; path = categories/UIKitAdditions.h; sourceTree = "<group>"; };
+		575D9F81150AB38E0025EF7E /* UIKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIKitAdditions.m; path = categories/UIKitAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +144,11 @@
 		575D9F75150A914B0025EF7E /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				575D9F76150A916B0025EF7E /* MyTypes.h */,
-				575D9F77150A916B0025EF7E /* MyTypes.m */,
+				575D9F76150A916B0025EF7E /* MEHTypes.h */,
+				575D9F77150A916B0025EF7E /* MEHTypes.m */,
 				575D9F7A150A920E0025EF7E /* notUsed */,
+				575D9F80150AB38E0025EF7E /* UIKitAdditions.h */,
+				575D9F81150AB38E0025EF7E /* UIKitAdditions.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -154,7 +160,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575D9F78150A916B0025EF7E /* MyTypes.h in Headers */,
+				575D9F78150A916B0025EF7E /* MEHTypes.h in Headers */,
+				575D9F82150AB38E0025EF7E /* UIKitAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				575D9F55150A91230025EF7E /* iOSTools.m in Sources */,
-				575D9F79150A916B0025EF7E /* MyTypes.m in Sources */,
+				575D9F79150A916B0025EF7E /* MEHTypes.m in Sources */,
+				575D9F83150AB38E0025EF7E /* UIKitAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

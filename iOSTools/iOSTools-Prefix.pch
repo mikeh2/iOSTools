@@ -5,7 +5,7 @@
 #ifdef __OBJC__
    #import <Foundation/Foundation.h>
    #import <UIKit/UIKit.h>
-   #import "MyTypes.h"
+   #import "MEHTypes.h"
 
 //
 // http://www.iphonedevsdk.com/forum/iphone-sdk-development/8162-debugging-tip-nslog.html

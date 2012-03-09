@@ -4,6 +4,9 @@
 - (BOOL) encryptWithKey: (NSString *) key;
 @end
 
+
+#import <CommonCrypto/CommonCryptor.h>
+
 @implementation NSMutableData (DESCCC)
 - (BOOL) encryptWithKey: (NSString *) key
 {

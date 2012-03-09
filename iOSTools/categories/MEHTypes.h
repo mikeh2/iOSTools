@@ -1,6 +1,5 @@
 //
-//  MyTypes.h
-//  iSpell
+//  MEHTypes.h
 //
 //  Created by mike haberman on 2/10/09.
 //  Copyright 2009 3gne. All rights reserved.
@@ -11,7 +10,7 @@
 
 int randomBetweenNegOneAndPosOne(id obj1, id obj2, void *context);
 
-@interface NSString (MyTypes) 
+@interface NSString (MEHTypes) 
 
 - (NSInteger) indexOf: (NSString*) substring;
 - (NSString*) trim;
@@ -22,23 +21,18 @@ int randomBetweenNegOneAndPosOne(id obj1, id obj2, void *context);
 @end
 
 
-@interface NSMutableArray (MyTypes) 
+@interface NSMutableArray (MEHTypes) 
 
 - (void) shuffle;
 - (void) swapFrom:(int) fromIdx to:(int) toIdx;
-
 @end
 
-@interface  NSError (MyTypes) 
+@interface  NSError (MEHTypes) 
 - (NSString*) errorToMessage;
 @end
 
 
-@interface UIView (MyTpes)
--(CGPoint) boundsCenter;
-@end
-
-@interface NSObject (ClassName)
+@interface NSObject (MEHTypes)
 
 - (NSString *)className;
 + (NSString *)className;

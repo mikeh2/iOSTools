@@ -1,17 +1,16 @@
 //
-//  MyTypes.m
-//  iSpell
+//  MEHTypes.m
 //
 //  Created by mike haberman on 2/10/09.
 //  Copyright 2009 3gne. All rights reserved.
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import <CommonCrypto/CommonCryptor.h>
 
-#import "MyTypes.h"
 
-@implementation NSObject (ClassName)
+#import "MEHTypes.h"
+
+@implementation NSObject (MEHTypes)
 
 - (NSString *)className {
    return NSStringFromClass([self class]);
@@ -22,7 +21,7 @@
 @end
 
 
-@implementation NSString (MyTypes) 
+@implementation NSString (MEHTypes) 
 
 +(NSString*) capitalizeFirstLetter: (NSString*) str
 {
@@ -110,19 +109,6 @@
 @end
 
 
-@implementation UIView (MyTpes)
-
--(CGPoint) boundsCenter
-{
-   // calculate my center
-   float cx = [self bounds].size.width/2.0  + [self bounds].origin.x;
-   float cy = [self bounds].size.height/2.0 + [self bounds].origin.y;
-
-   return CGPointMake(cx,cy);
-}
-@end
-
-
 
 int randomBetweenNegOneAndPosOne(id obj1, id obj2, void *context)
 {
@@ -130,7 +116,11 @@ int randomBetweenNegOneAndPosOne(id obj1, id obj2, void *context)
    return (random()%3 - 1);    
 }
 
-@implementation NSMutableArray (MyTypes) 
+@implementation NSMutableArray (MEHTypes) 
+
+//
+// http://mikeash.com/pyblog/friday-qa-2009-05-22-objective-c-class-loading-and-initialization.html
+//
 + (void)load
 {
    srandom(time(NULL));
@@ -169,7 +159,7 @@ int randomBetweenNegOneAndPosOne(id obj1, id obj2, void *context)
 
 
 
-@implementation NSError (MyTypes) 
+@implementation NSError (MEHTypes) 
 
 - (NSString*) errorToMessage
 {
