@@ -33,8 +33,8 @@
 // for how the '##' is intrepreted
 //
 #ifdef DEBUG
-#define DebugLog(s, ...) NSLog(s, ##__VA_ARGS__)
-#define DetailLog(s, ...)  NSLog(@"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__]lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#define DebugLog(s, ...)   NSLog(s, ##__VA_ARGS__)
+#define DetailLog(s, ...)  NSLog(@"<%@:(%d)> %@",[[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
 #define DebugLog(s, ...)
 #define DetailLog(s, ...)
